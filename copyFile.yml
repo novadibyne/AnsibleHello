@@ -1,0 +1,20 @@
+- name: Copy Cert from Local machine to Remote machines
+  hosts: all
+  tasks:
+    - name: copying file with playbook
+      become: true 
+      copy:
+        src: /home/administrator/testing/newcert.pem 
+        dest: /home/tier23/
+        owner: root
+        group: root        
+        mode: 0644
+		
+    - name: copying file with playbook
+      become: true 
+      copy:
+        src: /home/administrator/testing/newkey.pem 
+        dest: /home/tier23/
+        owner: root
+        group: root         
+        mode: 0644	
