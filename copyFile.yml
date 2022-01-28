@@ -2,18 +2,18 @@
   hosts: all
   tasks:
     - name: copying file with playbook
-      become: true 
+      become: true
       copy:
-        src: /home/administrator/testing/newcert.pem 
+        src: /home/administrator/testing/newcert.pem
         dest: /home/tier23/
         owner: root
-        group: root        
-        mode: 0644		
+        group: root
+        mode: 0644
     - name: copying file with playbook
-      become: true 
+      become: true
       copy:
-        src: /home/administrator/testing/newkey.pem 
+        src: /home/administrator/testing/newkey.pem
         dest: /home/tier23/
         owner: root
-        group: root         
-        mode: 0644	
+        group: root
+        mode: 0644
